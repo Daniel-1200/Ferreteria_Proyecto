@@ -16,7 +16,7 @@ public class Cliente implements Mostrable{
 
     @Override
     public void mostrarInformacion() {
-        System.out.println("Cliente: " + nombre + " | Cédula: " + cedula + " | Teléfono: " + telefono);
+        System.out.println("Cliente: " + nombre + " | Cedula: " + cedula + " | Telefono: " + telefono);
     }
 
     public String getNombre() {

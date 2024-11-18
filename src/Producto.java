@@ -11,7 +11,7 @@ abstract class Producto implements Mostrable{
 
     @Override
     public void mostrarInformacion() {
-        System.out.println("Código: " + codigo + " | Nombre: " + nombre + " | Precio: $" + precio);
+        System.out.println("Codigo: " + codigo + " | Nombre: " + nombre + " | Precio: $" + precio);
 
     }
 

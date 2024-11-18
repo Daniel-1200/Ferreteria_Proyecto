@@ -17,7 +17,7 @@ public class Pedido implements Mostrable{
 
     @Override
     public void mostrarInformacion() {
-        System.out.println("\n=== PEDIDO ===");
+        System.out.println("\tPEDIDO");
         cliente.mostrarInformacion();
         for (Map.Entry<Producto, Integer> entry : productos.entrySet()) {
             System.out.println(entry.getKey().nombre + " x" + entry.getValue());

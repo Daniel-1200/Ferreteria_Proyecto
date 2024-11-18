@@ -11,10 +11,9 @@ public class Main {
         inicializarInventario();
 
         int opcion;
-        do {
-            mostrarMenu();
+        do {mostrarMenu();
             opcion = scanner.nextInt();
-            scanner.nextLine(); // Limpiar buffer
+            scanner.nextLine();
 
             switch (opcion) {
                 case 1:
@@ -27,10 +26,10 @@ public class Main {
                     mostrarInventario();
                     break;
                 case 0:
-                    System.out.println("¡Hasta luego!");
+                    System.out.println("Gracias por usar");
                     break;
                 default:
-                    System.out.println("Opción inválida");
+                    System.out.println("Opción no valida");
             }
         } while (opcion != 0);
 
@@ -38,40 +37,40 @@ public class Main {
     }
     private static void inicializarInventario() {
 
-        inventario.put("H1", new Herramienta("H1", "Martillo", 15.99));
-        inventario.put("H2", new Herramienta("H2", "Destornillador", 8.99));
+        inventario.put("H1", new Herramienta("H1", "Martillo", 15.000));
+        inventario.put("H2", new Herramienta("H2", "Destornillador", 8.000));
 
 
-        inventario.put("M1", new MaterialConstruccion("M1", "Cemento", 12.50));
-        inventario.put("M2", new MaterialConstruccion("M2", "Arena", 5.99));
+        inventario.put("M1", new MaterialConstruccion("M1", "Cemento", 12.500));
+        inventario.put("M2", new MaterialConstruccion("M2", "Arena", 5.000));
     }
 
     private static void mostrarMenu() {
-        System.out.println("\n--- FERRETERÍA ---");
+        System.out.println("\tFERRETERÍA");
         System.out.println("1. Registrar Cliente");
         System.out.println("2. Crear Pedido");
         System.out.println("3. Mostrar Inventario");
         System.out.println("0. Salir");
-        System.out.print("Seleccione una opción: ");
+        System.out.print("Seleccione una opcion: ");
     }
 
     private static void registrarCliente() {
-        System.out.println("\n--- REGISTRO DE CLIENTE ---");
+        System.out.println("\tREGISTRO DE CLIENTE");
         System.out.print("Nombre: ");
         String nombre = scanner.nextLine();
-        System.out.print("Cédula: ");
+        System.out.print("Cedula: ");
         String cedula = scanner.nextLine();
-        System.out.print("Teléfono: ");
+        System.out.print("Telefono: ");
         String telefono = scanner.nextLine();
 
         Cliente cliente = new Cliente(nombre, cedula, telefono);
         clientes.put(cedula, cliente);
-        System.out.println("Cliente registrado con éxito");
+        System.out.println("Cliente registrado con exito");
     }
 
     private static void crearPedido() {
-        System.out.println("\n--- CREAR PEDIDO ---");
-        System.out.print("Cédula del cliente: ");
+        System.out.println("\tCREAR PEDIDO");
+        System.out.print("Cedula del cliente: ");
         String cedula = scanner.nextLine();
 
         Cliente cliente = clientes.get(cedula);
@@ -85,7 +84,7 @@ public class Main {
 
         do {
             mostrarInventario();
-            System.out.print("\nIngrese código del producto (0 para terminar): ");
+            System.out.print("\nIngrese codigo del producto (0 para terminar): ");
             codigo = scanner.nextLine();
 
             if (!codigo.equals("0")) {
@@ -106,7 +105,7 @@ public class Main {
     }
 
     private static void mostrarInventario() {
-        System.out.println("\n--- INVENTARIO ---");
+        System.out.println("\tINVENTARIO");
         for (Producto producto : inventario.values()) {
             producto.mostrarInformacion();
         }
