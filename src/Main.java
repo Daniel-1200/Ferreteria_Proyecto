@@ -37,12 +37,12 @@ public class Main {
     }
     private static void inicializarInventario() {
 
-        inventario.put("H1", new Herramienta("H1", "Martillo", 15.000));
-        inventario.put("H2", new Herramienta("H2", "Destornillador", 8.000));
+        inventario.put("H1", new Herramienta("H1", "Martillo", 15000));
+        inventario.put("H2", new Herramienta("H2", "Destornillador", 8000));
 
 
-        inventario.put("M1", new MaterialConstruccion("M1", "Cemento", 12.500));
-        inventario.put("M2", new MaterialConstruccion("M2", "Arena", 5.000));
+        inventario.put("M1", new MaterialConstruccion("M1", "Cemento", 12500));
+        inventario.put("M2", new MaterialConstruccion("M2", "Arena", 5000));
     }
 
     private static void mostrarMenu() {
